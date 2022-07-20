@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+import sqlite3
+def edit2(fullname,newnumber):
+    try:
+        conn = sqlite3.connect('BookyBase.db')
+        cur = conn.cursor()
+        #pou nouvo nimewo an
+        sql = "UPDATE contacts SET number = ? WHERE fullname = ?"
+        value = (newnumber,fullname )
+        cur.execute(sql, value)
+        conn.commit()
+        print("successfuly update")
+        cur.close()
+        conn.close()
+        print("Connexion closed")
+
+    except sqlite3.Error as error:
+        print("Error,someting went wrong!",error)
+    
