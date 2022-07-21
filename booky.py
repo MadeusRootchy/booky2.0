@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import sqlite3
-import numpy as np
 import csv
 import sys
 from nimewo import edit2
@@ -13,6 +12,8 @@ from bd2 import Create
 from bd3 import Insertion
 from bd4 import Lister
 from BD8 import sup
+import os
+os.system(" color c")
 contact={}
 lischwa=[1,2,3,4,5,6]
 
@@ -42,13 +43,15 @@ while True :
         if int (chwa)==1:
             fullname=input("Enter the fullname : ")
             while not fullname :
+                print("The name case can't be empty ...")
                 fullname=input("Enter the fullname please : ")
             
             number=input("Enter the phone number : ")
             while not number :
-                number=input("Enter the phone_Number please : ")
-            while not isinstance(number,int):
-                print("The phone number can't be letter!")
+                print("The number case can't be empty ...")
+                number=input("Renter the phone_Number please : ")
+            while not isinstance(int(number),int):
+                print("The phone number can't be letters!")
                 number=input("enter the phone_Number please : ")
 
             email=input("Enter the mail : ")

@@ -15,5 +15,5 @@ def edit2(fullname,newnumber):
         print("Connexion closed")
 
     except sqlite3.Error as error:
-        print("Erreur lors du mise à jour dans la table contacts", error)
+        print("Error,someting went wrong!",error)
     
