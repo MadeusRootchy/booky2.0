@@ -2,16 +2,7 @@
 import sqlite3
 import csv
 import sys
-from nimewo import edit2
-from search import Lister2
-from email import edit4
-from adres import edit5
-from non import edit3
-from bd import connexion
-from bd2 import Create
-from bd3 import Insertion
-from bd4 import Lister
-from BD8 import sup
+from total import edit2,Lister2,edit4,edit5,edit3,connexion,Create,Insertion,Lister,sup
 import os
 os.system(" color c")
 contact={}
